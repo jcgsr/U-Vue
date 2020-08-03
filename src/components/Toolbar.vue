@@ -51,6 +51,10 @@
 </template>
 
 <style lang="css">
+.navbar  ul li{
+  display: flex;
+  width: 100%;
+}
 li i {
   font-size: 1.3rem;
   color: rgba(245, 245, 7, 0.479);

@@ -1,11 +1,13 @@
 <template>
-  <div class="soma">
-    <div class="container">
-       <h2>Cubo</h2>
-       <input @focus="$event.target.select()" type="number" name="number" v-model="number" /> 
-       <button class="animate__animated animate__shakeX btn-secondary" @click='zerar'>zerar</button>
+<div class="cubo">
+    <div class="card border-secondary mb-3">
+      <div class="card-body">
+        <h4 class="card-title">Cubo</h4>
+        <input class="form-control" @focus="$event.target.select()" type="number" name="number" v-model="number" /> 
+       <button class="animate__animated animate__shakeX btn btn-secondary" @click='zerar'>zerar</button>
        <h2>{{ result }}</h2>
-    </div>
+      </div>
+    </div>    
   </div>
 </template>
 
@@ -32,23 +34,22 @@ export default {
 </script>
 
 <style scoped>
-.soma {
-  text-align: center;
-  background-color: rgb(40, 151, 77);
-  padding: 1rem;
-  display: flex;  
-  justify-content: space-around;
-  color: aliceblue;
+.card {
+  max-width: 50%;
+  margin-bottom: 1rem;
+  color: rgba(245, 245, 7, 0.479);
+  
+} 
+
+.card button {
+  margin-top: 1rem;
 }
 
-.container {
-   max-width: 80%;
-   display: flex;
-   flex-direction: column;
-}
-
-.container button {
-   margin-top: 1rem;
-}
+  @media only screen and (max-width: 600px) {
+.card {
+		max-width: 80%;	
+		}
+  }
 
 </style>
+

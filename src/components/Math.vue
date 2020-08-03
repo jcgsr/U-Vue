@@ -39,4 +39,5 @@
 		padding: 1rem;
 		color: rgba(245, 245, 7, 0.479);
 	}
-</style>
+	
+/style>

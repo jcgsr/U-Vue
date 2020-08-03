@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Toolbar />    
     <transition
       enter-active-class="animate__animated animate__zoomIn"
@@ -29,10 +29,11 @@ export default {
 </script>
 
 <style>
-*,
-html {
+* {
   box-sizing: border-box;
+  text-align: center;  
+  margin: 0 auto;
   width: 100%;
-  text-align: center;
 }
+
 </style>

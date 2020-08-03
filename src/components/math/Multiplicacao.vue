@@ -1,11 +1,23 @@
 <template>
-  <div class="soma">
-    <div class="container">
-       <h2>Multiplicação</h2>
-       <input @focus="$event.target.select()" type="number" name="number1" v-model="number1" /> x
-       <input @focus="$event.target.select()" type="number" name="numbr2" v-model="number2" />
-       <button class="animate__animated animate__pulse btn-secondary" @click='zerar'>zerar</button>
-       <h2>{{ result }}</h2>
+  <div class="card border-secondary mb-3">
+    <div class="card-body">
+      <h4 class="card-title">Multiplicação</h4>
+      <input
+        class="form-control"
+        @focus="$event.target.select()"
+        type="number"
+        name="number1"
+        v-model="number1"
+      /> x
+      <input
+        class="form-control"
+        @focus="$event.target.select()"
+        type="number"
+        name="numbr2"
+        v-model="number2"
+      />
+      <button class="animate__animated animate__pulse btn btn-secondary" @click="zerar">zerar</button>
+      <h2>{{ result }}</h2>
     </div>
   </div>
 </template>
@@ -15,43 +27,37 @@ export default {
   data() {
     return {
       number1: 0,
-      number2: 0                    
+      number2: 0,
     };
-  }, 
+  },
   computed: {
     result() {
       return parseFloat(this.number1) * parseFloat(this.number2);
     },
-    
   },
   methods: {
-     zerar: function() {        
-        this.number1 = 0
-        this.number2 = 0
-     }
-  }  
-  
+    zerar: function () {
+      this.number1 = 0;
+      this.number2 = 0;
+    },
+  },
 };
 </script>
 
 <style scoped>
-.soma {
-  text-align: center;
-  background-color: gray;
-  padding: 1rem;
-  display: flex;  
-  justify-content: space-around;
-  color: aliceblue;
+.card {
+  max-width: 50%;
+  margin-bottom: 1rem;
+  color: rgba(245, 245, 7, 0.479);
 }
 
-.container {
-   max-width: 80%;
-   display: flex;
-   flex-direction: column;
+.card button {
+  margin-top: 1rem;
 }
-
-.container button {
-   margin-top: 1rem;
-}
+  @media only screen and (max-width: 600px) {
+.card {
+		max-width: 80%;	
+		}
+  }
 
 </style>
