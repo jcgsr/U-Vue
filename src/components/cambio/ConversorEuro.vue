@@ -2,7 +2,7 @@
   <div class="container">
     <div class="alert alert-dismissible alert-danger" v-if="errored">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <p>Erro! O servidor não está respondendo.</p>
+      <p>Erro! O servidor não está respondendo. 🙁</p>
     </div>
     <div class="conversor">
       <div class="card border-secondary mb-3">
