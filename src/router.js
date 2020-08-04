@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Math from './components/Math'
 import MediaEscolar from './components/MediaEscolar'
 import Cambio from './components/Cambio'
+import Conversor from './components/Conversor'
 import Sobre from './components/Sobre'
 
 Vue.use(Router)
@@ -32,5 +33,9 @@ export default new Router({
       path: '/sobre',
       name: 'sobre',
       component: Sobre
-   }]
-})
+   }, {
+		path: '/conversor',
+		name: 'conversor',
+		component: Conversor
+	}]
+});

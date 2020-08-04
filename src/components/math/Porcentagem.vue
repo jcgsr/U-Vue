@@ -2,6 +2,7 @@
   <div class="card border-secondary mb-3">
     <div class="card-body">
       <h4 class="card-title">Porcentagem</h4>
+		Porcento
       <input
         class="form-control"
         @focus="$event.target.select()"

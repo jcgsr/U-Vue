@@ -34,6 +34,12 @@
           </li>
 
           <li class="nav-item">
+            <router-link to="/conversor" class="nav-link">
+              <i class="fas fa-temperature-high" title="Conversor"></i>
+            </router-link>
+          </li>
+
+          <li class="nav-item">
             <router-link to="/cambio" class="nav-link">
               <i class="fas fa-search-dollar" title="Cotação Dólar/Euro"></i>
             </router-link>

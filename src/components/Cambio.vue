@@ -42,6 +42,7 @@ export default {
   .conversor {
  display: grid;
  max-width: 80%;
+ margin: 0 auto;
   }
     .card {
       margin-bottom: 1rem;

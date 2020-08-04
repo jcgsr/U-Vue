@@ -34,6 +34,7 @@ export default {
   text-align: center;  
   margin: 0 auto;
   width: 100%;
+  color: rgba(245, 245, 7, 0.479);
 }
 
 </style>
