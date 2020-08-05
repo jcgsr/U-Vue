@@ -13,11 +13,11 @@
             v-model="nota1"
           />
           2ª Nota:
-          <input class="form-control" type="number" name="nota2" v-model="nota2" />
+          <input @focus="$event.target.select()" class="form-control" type="number" name="nota2" v-model="nota2" />
           3ª Nota:
-          <input class="form-control" type="number" name="nota3" v-model="nota3" />
+          <input @focus="$event.target.select()" class="form-control" type="number" name="nota3" v-model="nota3" />
           4ª Nota:
-          <input class="form-control" type="number" name="nota4" v-model="nota4" />
+          <input @focus="$event.target.select()" class="form-control" type="number" name="nota4" v-model="nota4" />
                    
           Média 1º Semestre:
           <h4>{{ mediaSem1 }}</h4>

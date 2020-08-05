@@ -9,8 +9,7 @@
         <div class="card-body">
           <h4 class="card-title">{{ moedaA }} para {{ moedaB }}</h4>
           <input class="form-control" type="number" v-model="moedaA_value" :placeholder="moedaA" />
-          <button class="btn btn-secondary" @click="converter">Converter</button>
-          <h2 id="value">{{ moedaB_value | currency }}</h2>
+          <h2 id="value">{{ result | currency }}</h2>
         </div>
       </div>
     </div>
@@ -18,6 +17,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Conversor",
   props: ["moedaA", "moedaB"],
@@ -26,37 +26,48 @@ export default {
       moedaA_value: "",
       moedaB_value: 0,
       errored: false,
+      info: null,
     };
   },
-  methods: {
-    converter() {
-      let de_para = this.moedaA + "_" + this.moedaB;
-      let url =
-        "https://free.currconv.com/api/v7/convert?q=" +
-        de_para +
-        "&compact=ultra&apiKey=41c3d3eae7092993a692";
+  mounted() {
+    axios
+      .get("https://economia.awesomeapi.com.br/all/EUR-BRL")
+      .then((res) => (this.info = res.data.EUR.bid))
+      .catch((error) => {
+        console.log(error);
+        this.errored = true;
+      })      
+  },
 
-      fetch(url)
-        .then((res) => {
-          return res.json();
-        })
-        .then((json) => {
-          let cotacao = json[de_para];
-          this.moedaB_value = (cotacao * parseFloat(this.moedaA_value)).toFixed(
-            2
-          );
-        })
-        .catch((error) => {
-          console.log(error);
-          this.errored = true;
-        })
-        .finally(() => (this.loading = false));
+  computed: {
+    result() {
+      return (this.info * this.moedaA_value).toFixed(2);
     },
   },
+
   filters: {
     currency(value) {
-      return "€ " + value;
+      return "R$ " + value.toLocaleString();
     },
   },
 };
 </script>
+
+<style>
+.conversor input {
+  margin-bottom: 1rem;
+}
+
+.conversor button {
+  margin-top: 1rem;
+}
+
+#value {
+  margin-top: 1rem;
+}
+
+.alert button {
+  max-width: 10%;
+  display: block;
+}
+</style>

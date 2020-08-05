@@ -2,21 +2,22 @@
   <div id="cambio">
     <h2>{{ title }}</h2>
     <div class="conversor">
-      <Conversor moeda-a="USD" moeda-b="BRL" />
-      <Conversor moeda-a="EUR" moeda-b="BRL" />
-      <ConversorDollar moeda-a="BRL" moeda-b="USD" />
-      <ConversorEuro moeda-a="BRL" moeda-b="EUR" />
+      <ConversorDollarReal moeda-a="USD" moeda-b="BRL" />
+      <ConversorEuroReal moeda-a="EUR" moeda-b="BRL" />
+      <ConversorRealDollar moeda-a="BRL" moeda-b="USD" />
+      <ConversorRealEuro moeda-a="BRL" moeda-b="EUR" />
     </div>
   </div>
 </template>
 
 <script>
-import Conversor from "./cambio/Conversor";
-import ConversorDollar from "./cambio/ConversorDollar";
-import ConversorEuro from "./cambio/ConversorEuro";
+import ConversorDollarReal from "./cambio/ConversorDollarReal";
+import ConversorEuroReal from "./cambio/ConversorEuroReal";
+import ConversorRealDollar from "./cambio/ConversorRealDollar";
+import ConversorRealEuro from "./cambio/ConversorRealEuro";
 
 export default {
-  components: { Conversor, ConversorDollar, ConversorEuro },
+  components: { ConversorDollarReal, ConversorEuroReal, ConversorRealDollar, ConversorRealEuro },
   name: "Cambio",
   data: () => ({
     title: "Taxa de Câmbio",
@@ -31,7 +32,7 @@ export default {
 }
 
 .conversor {
-  display: flex;
+  /* display: flex; */
   color: rgba(245, 245, 7, 0.479);
   width: 100%;
   margin: 0 auto;
@@ -41,7 +42,6 @@ export default {
 @media only screen and (max-width: 600px) {
   .conversor {
  display: grid;
- max-width: 80%;
  margin: 0 auto;
   }
     .card {
