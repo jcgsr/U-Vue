@@ -20,8 +20,7 @@
     </div>
     <Temperatura v-if="showTemperatura" />
     <Comprimento v-if="showComprimento" />
-    <Massa v-if="showMassa" />
-    <p>{{ dataAtual }}</p>
+    <Massa v-if="showMassa" />    
   </div>
 </template>
 
@@ -36,8 +35,7 @@ export default {
       title: "Conversor Vue",
       showTemperatura: true,
       showComprimento: false,
-      showMassa: false,
-      dataAtual: ''
+      showMassa: false     
     };
   },
   components: {
@@ -59,15 +57,7 @@ export default {
       this.showMassa = true;
       this.showComprimento = false;
       this.showTemperatura = false;
-    },
-    hoje() {
-      let dataHoje = new Date();
-      this.dataAtual = dataHoje.toLocaleDateString("pt-BR", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric"
-      });
-    }
+    }   
   },
   mounted() {
     this.hoje();

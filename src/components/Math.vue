@@ -1,5 +1,5 @@
 <template>
-   <div class="math">
+   <div id="math">
       <h2>{{ title }}</h2>
 		<Soma />
 		<Subtracao />
@@ -35,9 +35,9 @@
 </script>
 
 <style lang="css">
-   .math	h2 {		
+   #math	h2 {		
 		padding: 1rem;
 		color: rgba(245, 245, 7, 0.479);
 	}
 	
-/style>
+</style>

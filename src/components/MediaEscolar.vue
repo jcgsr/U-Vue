@@ -1,14 +1,18 @@
 <template>
   <div id="media">
     <h2>{{ title }}</h2>
-    <button type="button" class="btn btn-info" @click="showMessage = !showMessage">Instruções</button>
+    <button
+      type="button"
+      class="btn btn-info"
+      v-scroll-to="'#info'"
+      @click="showMessage = !showMessage "
+    >Instruções</button>
     <Direta />
     <Rec />
 
-    <div class="alert alert-dismissible alert-info" v-show="showMessage">      
-
+    <div class="alert alert-dismissible alert-info" id="info" v-show="showMessage">
       <ul>
-      INSTRUÇÕES
+        INSTRUÇÕES
         <li>
           A média utilizada nesse WebApp é
           <ins>5.0</ins>.
@@ -58,10 +62,11 @@ import Rec from "./media/Rec";
 export default {
   name: "Media",
   components: { Direta, Rec },
+
   data: () => ({
-    title: "Média Escolar",
+    title: "Média Escolar Vue",
     showMessage: false,
-  }),
+  }),  
 };
 </script>
 
@@ -77,18 +82,32 @@ export default {
   margin-bottom: 1rem;
 }
 
-.alert{
-	max-width: 30%;
+.alert {
+  max-width: 30%;
 }
 
 .alert ul li {
-	list-style: square;
-	color: aliceblue;
+  list-style: square;
+  color: aliceblue;
 }
 
 @media only screen and (max-width: 600px) {
-.alert {
-		max-width: 60%;	
-		}
+  .alert {
+    max-width: 60%;
   }
+
+  #media button {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #media button {
+    width: 30%;
+  }
+
+  .alert {
+    max-width: 60%;
+  }
+}
 </style>
