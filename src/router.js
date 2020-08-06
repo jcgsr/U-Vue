@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from './components/Home'
-import Math from './components/Math'
+import MathVue from './components/MathVue'
 import MediaEscolar from './components/MediaEscolar'
 import Cambio from './components/Cambio'
 import Conversor from './components/Conversor'
+import IMC from './components/IMC'
+import CEP from './components/CEP'
 import Sobre from './components/Sobre'
 
 Vue.use(Router)
@@ -20,7 +22,7 @@ export default new Router({
    }, {
       path: '/math',
       name: 'math',
-      component: Math
+      component: MathVue
    }, {
       path: '/media',
       name: 'media',
@@ -37,5 +39,13 @@ export default new Router({
 		path: '/conversor',
 		name: 'conversor',
 		component: Conversor
+	}, {
+      path: '/imc',
+      name: 'imc',
+      component: IMC
+   }, {
+		path: '/cep',
+		name: 'cep',
+		component: CEP
 	}]
 });

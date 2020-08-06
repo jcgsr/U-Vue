@@ -1,6 +1,7 @@
 <template>
 	<div id="home">
 		<h2>{{ title }}</h2>
+		<h4>{{ subtitle }}</h4>
 	</div>
 </template>
 
@@ -8,13 +9,14 @@
 	export default {
 		name: 'Home',
 		data: () => ({
-			title: 'U-Vue'
+			title: 'U-Vue',
+			subtitle: 'Webapps utilitários criados em VueJS'
 		})
 	}
 </script>
 
 <style lang="css">
-	#home h2 {
+	#home h2, h4 {
 		text-align: center;
 		padding: 1rem;
 		color: rgba(245, 245, 7, 0.479);

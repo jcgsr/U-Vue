@@ -10,12 +10,9 @@ import 'bootswatch/dist/cyborg/bootstrap.min.css';
 import 'animate.css';
 
 import VueScrollTo from 'vue-scrollto'
+Vue.use(VueScrollTo)
 
 Vue.config.productionTip = false
-
-
-
-Vue.use(VueScrollTo)
 
 new Vue({
   router,

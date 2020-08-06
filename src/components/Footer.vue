@@ -27,18 +27,18 @@ export default {
 
 a:link {
   text-decoration: none;
-  max-width: 8%;
+  width: 8%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 668px) {
   a:link {
-    max-width: 30%;
+    width: 30%;
   }
 }
 
 @media only screen and (max-width: 800px) {
   a:link {
-    max-width: 15%;
+    width: 25%;
   }
 }
 </style>

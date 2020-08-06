@@ -14,7 +14,7 @@
       <ul>
         INSTRUÇÕES
         <li>
-          A média utilizada nesse WebApp é
+          A média utilizada nesse Webapp é
           <ins>5.0</ins>.
         </li>
         <li>

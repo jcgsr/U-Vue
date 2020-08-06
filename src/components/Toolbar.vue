@@ -50,6 +50,20 @@
             </router-link>
           </li>
 
+           <li class="nav-item">
+            <router-link to="/imc" class="nav-link">
+             <i class="fas fa-weight" title="IMC"></i>
+              <h6>IMC</h6>
+            </router-link>
+          </li>
+
+         <li class="nav-item">
+            <router-link to="/cep" class="nav-link">
+             <i class="fas fa-mail-bulk" title="CEP"></i>
+              <h6>CEP</h6>
+            </router-link>
+          </li>
+
           <li class="nav-item">
             <router-link to="/sobre" class="nav-link">
               <i class="fas fa-info" title="Info"></i>

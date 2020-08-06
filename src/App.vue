@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 *,
 body,
 html {
@@ -54,6 +55,7 @@ html {
   width: 100%;
   color: rgba(245, 245, 7, 0.479);
   scroll-behavior: smooth;
+  font-family: 'Libre Baskerville', serif;
 }
 
 #app p {
