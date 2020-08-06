@@ -15,10 +15,13 @@
 	}
 </script>
 
-<style lang="css">
-	#home h2, h4 {
+<style>
+	#home h2 {
 		text-align: center;
 		padding: 1rem;
+		color: rgba(245, 245, 7, 0.479);
+	}
+	#home h4 {
 		color: rgba(245, 245, 7, 0.479);
 	}
 </style>

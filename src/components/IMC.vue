@@ -1,7 +1,7 @@
 <template>
   <div id="imc">
     <h2>IMC</h2>
-    <div class="card border-secondary mb-3">
+    <div class="card border-secondary mb-3 animate__animated animate__fadeInDown">
       <div class="card-body">
         Peso
         <input
@@ -22,7 +22,7 @@
         <h2>{{ result }}</h2>
       </div>
     </div>
-    <div class="tabela">
+    <div class="tabela animate__animated animate__bounceInUp">
       <table border="3">
         <thead>
           <tr class="table-active">
@@ -87,6 +87,13 @@ export default {
 </script>
 
 <style scoped>
+#imc h2 {
+  text-align: center;
+  padding: 1rem;
+  color: rgba(245, 245, 7, 0.479);
+}
+
+
 .card {
   max-width: 50%;
   margin-top: 1rem;

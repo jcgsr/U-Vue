@@ -38,7 +38,7 @@ a:link {
 
 @media only screen and (max-width: 800px) {
   a:link {
-    width: 25%;
+    width: 20%;
   }
 }
 </style>
