@@ -60,7 +60,7 @@
          <li class="nav-item">
             <router-link to="/cep" class="nav-link">
              <i class="fas fa-mail-bulk" title="Endereço"></i>
-              <h6>CEP</h6>
+              <h6>Endereço</h6>
             </router-link>
           </li>
 

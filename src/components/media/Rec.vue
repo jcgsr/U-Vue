@@ -46,17 +46,17 @@
 export default {
   data() {
     return {
-      nota1: "",
-      nota2: "",
-      nota3: "",
-      nota4: "",
-      media1: "",
-      media2: "",
-      rec1: '',
-      rec2: '',
-      mediaRec1: '',
-      mediaRec2: '',
-      mediaFinal: '',
+      nota1: 0,
+      nota2: 0,
+      nota3: 0,
+      nota4: 0,
+      media1: 0,
+      media2: 0,
+      rec1: 0,
+      rec2: 0,
+      mediaRec1: 0,
+      mediaRec2: 0,
+      mediaFinal: 0,
     };
   },
   computed: {

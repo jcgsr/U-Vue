@@ -3,8 +3,10 @@
     <h2>{{ title }}</h2>
     <div class="alert alert-dismissible alert-danger" v-if="errored">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <p>Erro! O servidor não está respondendo. 🙁</p>
-    </div>
+      <p>Erro! O servidor não está respondendo. 🙁
+        O CEP deve conter 8 números.
+      </p>
+    </div>   
     <div>
       <div class="card border-secondary mb-3">
         <div class="card-body">
@@ -29,15 +31,22 @@ export default {
       title: "Endereço",
       cepInfo: "",
       info: null,
+      errored: false,
+      errored2: false,
     };
   },
   methods: {
     mostrar() {
       axios
-        .get("https://cep.awesomeapi.com.br/json/" + this.cepInfo)
+        // "https://cep.awesomeapi.com.br/json/" + this.cepInfo
+        .get("https://viacep.com.br/ws/" + this.cepInfo + "/json/")
         .then((res) => {
-          this.info = res.data;
-        });
+          this.info = res.data;          
+        })
+        .catch((error) => {
+          console.log(error);
+          this.errored = true;          
+        })
     },
   },
 };
@@ -59,10 +68,9 @@ export default {
 }
 
 #cep li {
-  
   font-weight: bold;
   font-size: 1.5rem;
-  padding: .3rem;
+  padding: 0.3rem;
   text-align: left;
 }
 
@@ -73,7 +81,7 @@ export default {
 
 @media only screen and (max-width: 600px) {
   #cep .card {
-    width: 80%;    
+    width: 80%;
   }
 
   #cep li {
