@@ -73,7 +73,11 @@ export default {
   margin-top: 1rem;
   margin-bottom: 2.5rem;
   margin-left: 0.5rem;
+  opacity: 0.6;
+  transition: 0.8s;
 }
+
+.field:hover { opacity: 1}
 
 @media only screen and (max-width: 668px) {
   .container {
