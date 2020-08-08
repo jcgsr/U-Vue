@@ -8,6 +8,7 @@ import Cambio from './components/Cambio'
 import Conversor from './components/Conversor'
 import IMC from './components/IMC'
 import CEP from './components/CEP'
+import Afinador from './components/Afinador'
 import Sobre from './components/Sobre'
 
 Vue.use(Router)
@@ -47,5 +48,9 @@ export default new Router({
 		path: '/cep',
 		name: 'cep',
 		component: CEP
-	}]
+	}, {
+      path: '/afinador',
+      name: 'afinador',
+      component: Afinador
+   }]
 });

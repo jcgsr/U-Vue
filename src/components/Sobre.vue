@@ -46,7 +46,7 @@
 " data-title-url></div>
     <div class="p-div_sobre">
       <p>
-        Sobre o autor: Pernambucano do Recife, Alvirrubro. Tradutor (Ing-Port), Professor de Inglês. Desenvolvedor Web. Aprendendo Vue.js desde maio de 2020 depois de ter terminado o curso de JavaScript do
+        Sobre o <strong>autor</strong>: Pernambucano do Recife, Alvirrubro. Tradutor (Ing-Port), Professor de Inglês. Desenvolvedor Web. Aprendendo Vue.js desde maio de 2020 depois de ter terminado o curso de JavaScript do
         <a
           :href="luizURL"
         >Luiz Otávio</a>.
@@ -60,7 +60,7 @@
           <i class="fab fa-linkedin"></i>
         </a>
         <a :href="joTwitter" target="new" title="Twitter de Jovane">
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-twitter-square"></i>
         </a>
         <a :href="joWhatsapp" target="new" title="Whatsapp de Jovane">
           <i class="fab fa-whatsapp-square"></i>

@@ -39,7 +39,7 @@
           <li class="nav-item">
             <router-link to="/conversor" class="nav-link">
               <i class="fas fa-temperature-high" title="Conversor"></i>
-             <h6>Conversor</h6>
+              <h6>Conversor</h6>
             </router-link>
           </li>
 
@@ -50,17 +50,24 @@
             </router-link>
           </li>
 
-           <li class="nav-item">
+          <li class="nav-item">
             <router-link to="/imc" class="nav-link">
-             <i class="fas fa-weight" title="IMC"></i>
+              <i class="fas fa-weight" title="IMC"></i>
               <h6>IMC</h6>
             </router-link>
           </li>
 
-         <li class="nav-item">
+          <li class="nav-item">
             <router-link to="/cep" class="nav-link">
-             <i class="fas fa-mail-bulk" title="Endereço"></i>
+              <i class="fas fa-mail-bulk" title="Endereço"></i>
               <h6>Endereço</h6>
+            </router-link>
+          </li>
+
+          <li class="nav-item">
+            <router-link to="/afinador" class="nav-link">
+              <i class="fas fa-guitar" title="Afinador"></i>
+              <h6>Afinador</h6>
             </router-link>
           </li>
 
@@ -77,15 +84,15 @@
 </template>
 
 <style lang="css">
-.navbar  ul li{
+.navbar ul li {
   display: flex;
   width: 100%;
 }
 
-.navbar h6{
+.navbar h6 {
   color: rgba(245, 245, 7, 0.479);
-  margin-top: .3rem;
-} 
+  margin-top: 0.3rem;
+}
 
 li i {
   font-size: 1.3rem;

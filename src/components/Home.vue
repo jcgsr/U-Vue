@@ -83,7 +83,7 @@ export default {
 
 .field:hover { opacity: 1}
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 450px) {
   .container {
     display: flex;
     flex-direction: column;
