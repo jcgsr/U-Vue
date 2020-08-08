@@ -2,6 +2,8 @@
   <div id="footer">
     &copy;{{ footer }}
     <a class="btn btn-info" :href="link">Jovane</a>
+    <br>
+    {{ msg }}
   </div>
 </template>
 
@@ -11,6 +13,7 @@ export default {
     return {
       footer: "2020 - U-Vue criado e desenvolvido por ",
       link: "https://jcgsr.github.io/",
+      msg: "Todos os Direitos Reservados"
     };
   },
 };
