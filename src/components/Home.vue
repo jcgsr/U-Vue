@@ -77,11 +77,16 @@ export default {
   transition: 0.8s;
 }
 
+.field i {
+  font-size: 6rem;
+}
+
 .field:hover { opacity: 1}
 
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 425px) {
   .container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
   }
   .field {
     width: 70%;
@@ -89,14 +94,13 @@ export default {
     margin: 1rem auto;
   }
 }
-@media only screen and (max-width: 1025px) and (orientation: landscape) {
-  .container {
-    flex-direction: column;
-  }
+@media only screen and (min-width: 768px) {
+  
   .field {
     width: 70%;
     height: 90%;
     margin: 1rem auto;
+    margin-left: .5rem;
   }
 }
 </style>

@@ -49,7 +49,7 @@
         Sobre o autor: Pernambucano do Recife, Alvirrubro. Tradutor (Ing-Port), Professor de Inglês. Desenvolvedor Web. Aprendendo Vue.js desde maio de 2020 depois de ter terminado o curso de JavaScript do
         <a
           :href="luizURL"
-        >Luiz Otavio</a>.
+        >Luiz Otávio</a>.
       </p>
       <h4>Contatos</h4>
       <section class="contatos">
@@ -126,6 +126,7 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .parallax1 {
   /* The image used */
   background-image: url("../assets/logo1.jpg");
