@@ -33,15 +33,15 @@ a:link {
   width: 8%;
 }
 
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 450px) {
   a:link {
-    width: 30%;
+    width: 24%;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 736px) {
   a:link {
-    width: 20%;
+    width: 10%;
   }
 }
 </style>
