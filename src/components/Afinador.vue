@@ -3,6 +3,14 @@
     <h2>Afinador</h2>
     <div class="card border-secondary mb-3">
       <div class="card-body">
+        <!-- <h4>{{ track.title}}</h4>
+        <audio 
+          :src="track.audioURL"
+          controls
+          :ref="`player-${track.title}`"
+          type="audio/mp3"
+          @play="stopOthers(track.title)"
+        ></audio>-->
         <h2 style="color: blueviolet;">Mi (E)</h2>
         <audio controls>
           <source src="./tons/Mi82.mp3" type="audio/mp3" />
@@ -38,7 +46,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Afinador",
+  data() {
+    return {};
+  },
+  mounted() {
+    document.addEventListener(
+      "play",
+      function (e) {
+        var audios = document.getElementsByTagName("audio");
+        for (var i = 0, len = audios.length; i < len; i++) {
+          if (audios[i] != e.target) {
+            audios[i].pause();
+          }
+        }
+      },
+      true
+    );
+  },
+};
 </script>
 
 <style lang="css">
@@ -50,5 +77,11 @@ export default {};
 
 .card {
   width: 50%;
+}
+
+@media only screen and (max-width: 450px) {
+  .card {
+    width: 80%;
+  }
 }
 </style>
