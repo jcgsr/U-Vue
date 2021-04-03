@@ -37,6 +37,12 @@
         <router-link to="/cep" class="nav-link">
           <i class="fas fa-mail-bulk" title="Endereço"></i>
         </router-link>
+
+        <div class="field">
+          <router-link to="/afinador" class="nav-link">
+            <i class="fas fa-guitar" title="Afinador"></i>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -81,7 +87,9 @@ export default {
   font-size: 6rem;
 }
 
-.field:hover { opacity: 1}
+.field:hover {
+  opacity: 1;
+}
 
 @media only screen and (max-width: 450px) {
   .container {
@@ -95,12 +103,11 @@ export default {
   }
 }
 @media only screen and (min-width: 768px) {
-  
   .field {
     width: 70%;
     height: 90%;
     margin: 1rem auto;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
 }
 </style>
